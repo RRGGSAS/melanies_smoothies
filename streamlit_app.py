@@ -15,7 +15,7 @@ st.write("The name of smoothie will be", name_on_order)
 #para conectara a SniS (streamlit que no requiere cuenta pero debe ser público) 
 #session = get_active_session()
 cnx=st.connection("snowflake");
-session=cnx.session;
+session=cnx.session();
 
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
 #st.dataframe(data=my_dataframe, use_container_width=True)
