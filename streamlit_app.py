@@ -28,7 +28,7 @@ my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT
 pd_df = my_dataframe.to_pandas()
 
 # Mostrar en Streamlit
-st.dataframe(pd_df, use_container_width=True)
+st.dataframe(pd_df)
 
 # Detener la ejecución (opcional)
 st.stop()
