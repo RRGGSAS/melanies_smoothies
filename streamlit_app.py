@@ -28,10 +28,10 @@ my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT
 pd_df = my_dataframe.to_pandas()
 
 # Mostrar en Streamlit
-st.dataframe(pd_df)
+#st.dataframe(pd_df)
 
 # Detener la ejecución (opcional)
-st.stop()
+#st.stop()
 
 ingredients_list= st.multiselect(
 'Choose up to 5 ingredients:', my_dataframe, max_selections=5
